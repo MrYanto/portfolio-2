@@ -11,8 +11,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio 2026',
-  description: 'Integrated Framework Portfolio Theme System',
+  title: 'MrYanto Portfolio',
+  description: 'A Portfolio Remake as a FrontEnd Developer',
 };
 
 export default function RootLayout({
