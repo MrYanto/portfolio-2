@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Navigation } from '../types/navbar';
 import { Button } from './ui/button';
 import { Icon } from '@iconify/react';
+import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 
 const Navbar: React.FC = () => {
   return (
@@ -35,12 +36,36 @@ const Navbar: React.FC = () => {
           <p className='hidden lg:block'>Hire Me</p>
         </Button>
 
-        <Icon
-          icon='material-symbols:menu-rounded'
-          width='24'
-          height='24'
-          className='block lg:hidden'
-        />
+        {/* Mobile Navigation */}
+        <div className='block lg:hidden'>
+          <Sheet>
+            <SheetTrigger>
+              <Icon
+                icon='material-symbols:menu-rounded'
+                width='24'
+                height='24'
+              />
+            </SheetTrigger>
+            <SheetContent>
+              <nav>
+                <ul className='flex flex-col gap-6'>
+                  {Navigation.map((nav, index) => (
+                    <li key={index}>
+                      <a href={nav.Links} className='text-md'>
+                        {nav.Navigate}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+
+              <Button className='h-10 w-full'>
+                <Icon icon='hugeicons:mail-02' width='20' height='20' />
+                Hire Me
+              </Button>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </div>
   );
