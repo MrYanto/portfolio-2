@@ -9,7 +9,7 @@ import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 
 const Navbar: React.FC = () => {
   return (
-    <div className='custom-container flex-between flex h-16 py-0 lg:h-21'>
+    <div className='custom-container flex-between w-full bg-black/10 fixed flex h-16 py-0 backdrop-blur-sm lg:h-21 z-20'>
       <Image
         src={'/Logo.svg'}
         alt='Portfolio Logo'

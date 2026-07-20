@@ -8,7 +8,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-gradient-pink-purple',
+        default: 'bg-gradient-pink-purple hover:opacity-80',
       },
       size: {
         default:

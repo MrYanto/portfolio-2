@@ -187,18 +187,14 @@ body {
     @apply flex items-center justify-start;
   }
 
-  .bg-gradient-pink-purple {
-    background: linear-gradient(90deg, #dc49a6 0%, #8746eb 100%);
-    transition: 200ms all;
-  }
-
-  .bg-gradient-pink-purple:hover {
-    opacity: 80%;
-  }
-
   .shadow-purple {
     box-shadow: 0px 4px 24px rgba(135, 70, 235, 0.32);
   }
+}
+
+@utility bg-gradient-pink-purple {
+  background: linear-gradient(90deg, #dc49a6 0%, #8746eb 100%);
+  transition: 200ms all;
 }
 
 img {
