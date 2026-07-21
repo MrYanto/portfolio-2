@@ -21,11 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className='dar'>
+    <html lang='en' className='dark'>
       <body
         className={clsx(
           poppins.variable,
-          'bg-base-background text-neutral-100 antialiased'
+          'bg-neutral-500 text-neutral-100 antialiased'
         )}
       >
         {children}

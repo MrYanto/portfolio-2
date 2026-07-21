@@ -1,10 +1,18 @@
 import React from 'react';
+import Wave from '../../public/Wave Pattern.svg';
+import Grid from '../../public/Grid.svg';
+import Image from 'next/image';
 import { Button } from './ui/button';
 
 const Hero = () => {
   return (
     <section className='flex-center relative z-0 flex h-screen bg-radial-[at_bottom_right] from-[#8243EA]/40 to-60% px-5 pt-10'>
       <div className='absolute left-21.5 hidden h-64.5 w-64.5 translate-y-[-66%] self-start bg-radial from-[#6831E1]/40 lg:block' />
+      <Image
+        src={Grid}
+        alt='Grid Pattern'
+        className='absolute -z-50 h-full w-full self-auto'
+      />  
 
       <div className='flex-center flex-col gap-6'>
         {/* Button div */}
@@ -28,6 +36,12 @@ const Hero = () => {
         </p>
 
         <Button className='w-full lg:w-51.5'>View Portfolio</Button>
+
+        <Image
+          src={Wave}
+          alt='Background Wave Pattern'
+          className='absolute bottom-[-30%] w-full self-auto mask-b-from-0'
+        />
       </div>
     </section>
   );
