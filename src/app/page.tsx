@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Navbar from './partials/Navbar';
 import Hero from './partials/Hero';
 import About from './partials/About';
+import Footer from './partials/Footer';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       {/* Footer */}
+      <Footer />
     </>
   );
 }
