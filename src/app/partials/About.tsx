@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import VideoPROP from '../../../public/Video.svg';
+import { AboutCard } from '../../components/aboutCard';
+import { AboutMe } from '@/types/about';
 
 const About = () => {
   return (
@@ -32,6 +34,21 @@ const About = () => {
             technologies, clean coding practices, and performance
             optimization.{' '}
           </p>
+        </div>
+        <div className='grid grid-cols-2 justify-items-center gap-5 lg:grid-cols-4'>
+          {AboutMe.map((about) => (
+            <AboutCard
+              key={about.aspect}
+              className='flex-center flex flex-col text-center'
+              style={{ width: 'clamp(9.25rem, 18.96vw, 17.06rem)' }}
+              variant={about.variant}
+            >
+              <h2 className='text-display-sm lg:text-display-2xl font-extrabold'>
+                {about.number}+
+              </h2>
+              <p className='lg:text-md text-sm'>{about.aspect}</p>
+            </AboutCard>
+          ))}
         </div>
       </section>
 
