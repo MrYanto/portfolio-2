@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import VideoPROP from '../../../public/Video.svg';
 import { AboutCard } from '../../components/aboutCard';
+import CareerCard from '../../components/careerCard';
+import { careerInfo } from '@/types/about';
 import { AboutMe } from '@/types/about';
 
 const About = () => {
@@ -53,7 +55,29 @@ const About = () => {
       </section>
 
       {/* Carrer Journey */}
-      <section></section>
+      <section className='custom-container flex flex-col gap-8 lg:gap-12'>
+        <div className='flex-center flex flex-col gap-3'>
+          <h2 className='text-display-sm lg:text-display-2xl font-extrabold'>
+            Career Journey
+          </h2>
+          <p className='lg:text-md max-w-175 text-sm text-neutral-200'>
+            A visual timeline of key milestone and experiences from over the
+            years
+          </p>
+        </div>
+
+        <div className='flex flex-col gap-4 lg:gap-6'>
+          {careerInfo.map((career, index) => (
+            <CareerCard
+              title={career.title}
+              company={career.company}
+              entryTime={career.entryTime}
+              myWork={career.myWork}
+              key={index}
+            />
+          ))}
+        </div>
+      </section>
     </>
   );
 };
