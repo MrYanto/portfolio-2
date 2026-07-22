@@ -2,14 +2,14 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Navigation } from '../types/navbar';
-import { Button } from './ui/button';
+import { Navigation } from '../../types/navbar';
+import { Button } from '../../components/ui/button';
 import { Icon } from '@iconify/react';
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import { Sheet, SheetContent, SheetTrigger } from '../../components/ui/sheet';
 
 const Navbar: React.FC = () => {
   return (
-    <div className='custom-container flex-between w-full bg-black/10 fixed flex h-16 py-0 backdrop-blur-sm lg:h-21 z-20'>
+    <div className='custom-container flex-between fixed z-20 flex h-16 w-full bg-black/10 py-0 backdrop-blur-sm lg:h-21'>
       <Image
         src={'/Logo.svg'}
         alt='Portfolio Logo'

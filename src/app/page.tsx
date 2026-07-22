@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
+import Navbar from './partials/Navbar';
+import Hero from './partials/Hero';
+import About from './partials/About';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Navbar />
       {/* Main Page */}
       <Hero />
+      <About />
       {/* Footer */}
     </>
   );
